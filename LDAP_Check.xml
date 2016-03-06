@@ -1,0 +1,53 @@
+<transaction-template template_type="generic_service" xmlns="template">
+   <variables>
+      <variable name="PASSWORD1" value="taleo123"/>
+   </variables>
+   <transactions>
+      <mgmt_bcn_transaction>
+         <mgmt_bcn_txn_with_props>
+            <mgmt_bcn_txn is_representative="true" name="LDAP_test" monitoring="true" txn_type="LDAP"/>
+            <properties>
+               <property name="ldap_attrvalue" string_value="Taleo_Obiee_Auth" prop_type="1" encrypt="false"/>
+               <property name="Collection Interval" num_value="5.0" prop_type="2" encrypt="false"/>
+               <property name="connection" string_value="plain" prop_type="1" encrypt="false"/>
+               <property name="ldap_timeout" num_value="60.0" prop_type="2" encrypt="false"/>
+               <property name="ldap_base" string_value="cn=otes_oem_auth,cn=Users,dc=us,dc=oracle,dc=com" prop_type="1" encrypt="false"/>
+               <property name="ldap_port" num_value="3060.0" prop_type="2" encrypt="false"/>
+               <property name="retryinterval" num_value="5.0" prop_type="2" encrypt="false"/>
+               <property name="ldap_filter" string_value="cn=otes_oem_auth" prop_type="1" encrypt="false"/>
+               <property name="ldap_attrname" string_value="uid" prop_type="1" encrypt="false"/>
+               <property name="numretries" num_value="6.0" prop_type="2" encrypt="false"/>
+               <property name="ldap_user_name" string_value="cn=otes_oem_auth,cn=Users,dc=us,dc=oracle,dc=com" prop_type="1" encrypt="false"/>
+               <property name="ldap_password" string_value="{PASSWORD1}" prop_type="1" encrypt="true"/>
+               <property name="ldap_address" string_value="dcppidb05011.techno.taleocloud.net" prop_type="1" encrypt="false"/>
+               <property name="secure_auth" string_value="server" prop_type="1" encrypt="false"/>
+            </properties>
+            <per_bcn_properties/>
+         </mgmt_bcn_txn_with_props>
+         <steps_defn_with_props/>
+         <stepgroups_defn/>
+         <txn_thresholds>
+            <mgmt_bcn_threshold warning_threshold="2000.0" warning_operator="0" critical_threshold="4000.0" critical_operator="0" num_occurrences="1">
+               <mgmt_bcn_threshold_key metric_name="ldap_response" metric_column="AddressingSearch"/>
+            </mgmt_bcn_threshold>
+            <mgmt_bcn_threshold warning_threshold="2000.0" warning_operator="0" critical_threshold="4000.0" critical_operator="0" num_occurrences="1">
+               <mgmt_bcn_threshold_key metric_name="ldap_response" metric_column="BaseSearch"/>
+            </mgmt_bcn_threshold>
+            <mgmt_bcn_threshold warning_threshold="2000.0" warning_operator="0" critical_threshold="4000.0" critical_operator="0" num_occurrences="1">
+               <mgmt_bcn_threshold_key metric_name="ldap_response" metric_column="CompareOp"/>
+            </mgmt_bcn_threshold>
+            <mgmt_bcn_threshold warning_threshold="500.0" warning_operator="0" critical_threshold="4000.0" critical_operator="0" num_occurrences="1">
+               <mgmt_bcn_threshold_key metric_name="ldap_response" metric_column="ConnectionTime"/>
+            </mgmt_bcn_threshold>
+            <mgmt_bcn_threshold warning_threshold="2000.0" warning_operator="0" critical_threshold="4000.0" critical_operator="0" num_occurrences="1">
+               <mgmt_bcn_threshold_key metric_name="ldap_response" metric_column="MessagingSearch"/>
+            </mgmt_bcn_threshold>
+            <mgmt_bcn_threshold warning_threshold="0.0" warning_operator="1" critical_threshold="0.0" critical_operator="1" num_occurrences="1">
+               <mgmt_bcn_threshold_key metric_name="ldap_response" metric_column="status"/>
+            </mgmt_bcn_threshold>
+         </txn_thresholds>
+         <step_thresholds/>
+         <stepgroup_thresholds/>
+      </mgmt_bcn_transaction>
+   </transactions>
+</transaction-template>

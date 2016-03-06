@@ -1,0 +1,13 @@
+astroid==1.4.4
+colorama==0.3.6
+emclpy==0.1.0
+lazy-object-proxy==1.2.1
+ldap-target-ctl==0.1.0
+pluggy==0.3.1
+py==1.4.31
+pylint==1.5.4
+six==1.10.0
+tox==2.3.1
+virtualenv==14.0.6
+wheel==0.26.0
+wrapt==1.10.6
