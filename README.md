@@ -5,11 +5,11 @@ OID is a generic LDAP service.  As such, OEM will monitor LDAP (OID) as a generi
 
 ## Prerequisites
 - LDAP user created on each OID instance for the test to authenticate (see "Creating the Monitoring User" Installation Below):
-- emclpy and ldap_target_ctl modules installed on a host that has access to the OEM servers (see "Software Installation" below.  NOTE.  Already installed on App Admin utility host "dcprutb06001")
+- emclpy and ldap_target_ctl modules installed on a host that has access to the OEM servers (see "Software Installation" below.
 - Java 1.6 or greater requires.   Set the $JAVA_HOME to a java that is 1.6 or greater, if needed.
 
 ## Usage
-The ldap_target_ctl script should be executed from a utility host that has proper firewall access to the OEM host.  The script has already been installed on the App Admin utility host "dcprutb06001" where all pre-req's have been satisfied.  Many options have defaults, so only basic input is needed unless you have a special one off case.  See examples below for typical usage.
+The ldap_target_ctl script should be executed from a utility host that has proper firewall access to the OEM host.
 
 ```
 ldap_target_ctl -h

@@ -271,15 +271,15 @@ def get_arguments(args):
                             help='Path to file with batch configuration file',
                             required=True)
         parser.add_argument('-U', '--ldap_user', help='LDAP User',
-                            default=('cn=OTEE_OEM_Auth,'
+                            default=('cn=XXXXj,'
                                      'cn=Users,dc=us,dc=oracle,dc=com'))
         parser.add_argument('-w', '--ldap_password', help='LDAP User password',
                             default='XXXXXX')
         parser.add_argument('-B', '--ldap_base', help='LDAP Directory Base',
-                            default=('cn=OTEE_OEM_Auth,'
+                            default=('cn=XXXXn,'
                                      'cn=Users,dc=us,dc=oracle,dc=com'))
         parser.add_argument('-f', '--ldap_filter', help='LDAP filter',
-                            default='cn=OTEE_OEM_Auth')
+                            default='cn=XXXXXX')
         parser.add_argument('-a', '--ldap_search_attrib',
                             help='Search attribute for test',
                             default='Taleo_Obiee_Auth')
@@ -308,15 +308,15 @@ def get_arguments(args):
         parser.add_argument('-P', '--ldap_port', help='The LDAP server port',
                             required=True)
         parser.add_argument('-U', '--ldap_user', help='LDAP User',
-                            default=('cn=OTEE_OEM_Auth,'
+                            default=('cn=XXXXX,'
                                      'cn=Users,dc=us,dc=oracle,dc=com'))
         parser.add_argument('-w', '--ldap_password', help='LDAP User password',
                             default='XXXXXX')
         parser.add_argument('-B', '--ldap_base', help='LDAP Directory Base',
-                            default=('cn=OTEE_OEM_Auth,'
+                            default=('cn=XXXXXX,'
                                      'cn=Users,dc=us,dc=oracle,dc=com'))
         parser.add_argument('-f', '--ldap_filter', help='LDAP filter',
-                            default='cn=OTEE_OEM_Auth')
+                            default='cn=XXXXX')
         parser.add_argument('-a', '--ldap_search_attrib',
                             help='Search attribute for test',
                             default='Taleo_Obiee_Auth')
